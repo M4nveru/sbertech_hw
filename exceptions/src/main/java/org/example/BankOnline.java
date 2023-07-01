@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class BankOnline {
     private static final double LIMIT = 50000.00;
-    private static String[] blockedCards = {"111111111111", "222222222222", "333333333333"};
+    private static ArrayList<String> blockedCards = new ArrayList<>(Arrays.asList("111111111111", "222222222222", "333333333333"));
 
     public void send(String cardNumber, Double money) throws BankOnlineException {
         if (money == null || cardNumber == null){
