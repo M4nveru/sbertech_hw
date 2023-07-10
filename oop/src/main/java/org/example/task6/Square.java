@@ -1,8 +1,8 @@
 package org.example.task6;
 
 public class Square extends Figure implements Drawable{
-    private Point p1;
-    private Point p2;
+    private final Point p1;
+    private final Point p2;
 
     public Square(Point p1, Point p2) {
         this.p1 = p1;

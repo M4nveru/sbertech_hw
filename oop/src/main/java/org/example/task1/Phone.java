@@ -1,9 +1,9 @@
 package org.example.task1;
 
 public class Phone {
-    long number;
-    String model;
-    int weight;
+    private long number;
+    private String model;
+    private int weight;
 
     public Phone(long number, String model, int weight) {
         this.number = number;
@@ -36,6 +36,26 @@ public class Phone {
 
     public long getNumber() {
         return number;
+    }
+
+    public void setNumber(long number) {
+        this.number = number;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
     @Override

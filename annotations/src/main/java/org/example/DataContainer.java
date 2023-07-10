@@ -12,7 +12,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class DataContainer {
     public Boolean booleanData;
-    public double doubleData;
 
     private String stringData;
     private Integer intData;

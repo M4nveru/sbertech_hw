@@ -2,7 +2,7 @@ package org.example.task4;
 
 public class Author {
     private String name;
-    private Sex sex = null;
+    private Sex sex;
     private String email;
 
     public Author(String name, Sex sex, String email) {

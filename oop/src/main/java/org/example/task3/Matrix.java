@@ -1,9 +1,9 @@
 package org.example.task3;
 
 public class Matrix {
-    double[][] matrix;
-    int numOfCols;
-    int numOfRows;
+    private double[][] matrix;
+    private int numOfCols;
+    private int numOfRows;
 
     public Matrix(double[][] matrix) {
         this.matrix = matrix;

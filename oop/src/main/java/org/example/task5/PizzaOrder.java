@@ -2,7 +2,7 @@ package org.example.task5;
 
 public class PizzaOrder {
     private String name;
-    private Size size = null;
+    private Size size;
     private boolean sauceNeeded;
     private String address;
     private boolean orderAccessed;

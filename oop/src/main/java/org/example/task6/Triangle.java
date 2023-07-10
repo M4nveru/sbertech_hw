@@ -2,9 +2,9 @@ package org.example.task6;
 
 public class Triangle extends Figure implements Drawable{
 
-    private Point p1;
-    private Point p2;
-    private Point p3;
+    private final Point p1;
+    private final Point p2;
+    private final Point p3;
 
     public Triangle(Point p1, Point p2, Point p3) {
         this.p1 = p1;

@@ -20,20 +20,19 @@ public class Main {
     public static void main(String[] args) {
         // task 1
         IntStream streamInt = IntStream.of(10, 12, 4, 483, 124, 1, 56, 43, 100, 0)
-                .filter((value) -> {
-                    return value > 9 && value < 100;
-                })
+                .filter(
+                        (value) -> value > 9 && value < 100
+                )
                 .sorted();
 
         OptionalDouble avg = streamInt.average();
         System.out.println(avg.isPresent() ? avg.getAsDouble() : "Not an object");
 
         // task 3
-        Stream<String> stringStream = (new ArrayList(Arrays.asList("Mike", "Matt", "Alex", "Tihomir"))).stream();
+        Stream<String> stringStream = Stream.of("Mike", "Matt", "Alex", "Tihomir");
         Map<Long, String> nameMap = stringStream.map(
-                (n) -> {
-                    return new StreamContainer(n, (new Random()).nextInt(100));
-                })
+                (n) ->  new StreamContainer(n, (new Random()).nextInt(100))
+                )
                 .peek(StreamContainer::print)
                 .collect(Collectors.toMap(StreamContainer::getCount, StreamContainer::getName));
 
@@ -45,13 +44,11 @@ public class Main {
         hashMap.put("Engineers", Arrays.asList("Viktor", "Kristina", "Anton"));
         hashMap.put("MainVacancy", List.of("Mikhail"));
 
-        Stream<StreamContainer> streamOfContainerStream = hashMap.entrySet()
-                .stream()
-                .map(Map.Entry::getValue)
+        Stream<StreamContainer> streamOfContainerStream = hashMap.values().stream()
                 .flatMap(Collection::stream)
-                .map((n) -> {
-                    return new StreamContainer(n, (new Random()).nextInt(100));
-                });
+                .map(
+                        (n) -> new StreamContainer(n, (new Random()).nextInt(100))
+                );
 
         List<?> list = streamOfContainerStream.toList();
         System.out.println(list);
@@ -62,16 +59,16 @@ public class Main {
         // task 5
         String str = "1010010101";
         Stream<Boolean> booleanStream = str.chars()
-                .mapToObj((ch) -> {
-                    return (char) ch;
-                })
-                .map((ch) -> {
-                    return ch == '1';
-                });
+                .mapToObj(
+                        (ch) -> (char) ch
+                )
+                .map(
+                        (ch) -> ch == '1'
+                );
 
-        Optional<Boolean> result = booleanStream.reduce((b, x) -> {
-            return b && x;
-        });
+        Optional<Boolean> result = booleanStream.reduce(
+                (b, x) ->  b && x
+        );
         System.out.println(result.isPresent() ? result.get() : "Not an object");
     }
 }

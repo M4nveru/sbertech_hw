@@ -1,8 +1,8 @@
 package org.example.task6;
 
 public class Circle extends Figure implements Drawable{
-    private Point center;
-    private int radius;
+    private final Point center;
+    private final int radius;
 
     public Circle(Point center, int radius) {
         this.center = center;
