@@ -14,7 +14,7 @@ public class Decreaser implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 10; i++) {
             resourceProcessor.decrease();
         }
     }

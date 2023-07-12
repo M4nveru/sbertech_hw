@@ -16,7 +16,7 @@ public class ResourceProcessor {
                 wait();
             }
             resource.setIntValue(resource.getIntValue() + 1);
-            System.out.println("increase 1: " + resource.getIntValue());
+            System.out.println("increase: " + resource.getIntValue());
             notify();
         } catch (InterruptedException e) {
             System.out.println(e);
@@ -29,7 +29,7 @@ public class ResourceProcessor {
                 wait();
             }
             resource.setIntValue(resource.getIntValue() - 1);
-            System.out.println("decrease 1: " + resource.getIntValue());
+            System.out.println("decrease: " + resource.getIntValue());
             notify();
         } catch (InterruptedException e) {
             System.out.println(e);
