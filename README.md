@@ -8,5 +8,8 @@
 
 7. multithreading hw in branch multithreading (look PR)
 8. reflection hw in branch reflection (look PR)
-9. io hw in branch io (look PR) (task 1 -> datacontainer.java, task 2 -> testclass.java, task 3, 4 -> main.java)
+9. io hw in branch io (look PR) (task 1 -> datacontainer.java, task 2 -> testclass.java, task 3, 4 -> main.java)'
+10. generics hw in branch generics (look PR)
 
+readme content:
+![1ec96cd25e0d95f6ad664d6e8904819b](https://github.com/M4nveru/sbertech_hw/assets/93078341/ba5d7ec1-4af8-4b37-8be2-8b3968f60c3c)
